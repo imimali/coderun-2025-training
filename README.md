@@ -286,7 +286,7 @@ on the form object such as `form.as_table`, etc.
 
 This renders the form, now we can validate it, interact with it. But it still crashes on submitting it.
 
-See the final version of [user.html](templates/coderun_demo/index.html) and notice the 
+See the final version of [user.html](templates/coderun_demo/index.html) and notice the
 ```html
 {% csrf_token %}
 ```
@@ -363,6 +363,24 @@ We'll also display our data now in the form, reiterating over it again, it'll lo
 As you can see, the list of users displayed is now persisted.
 
 This, however is not all. Models can have references to each other. You can read about how this works [here](https://docs.djangoproject.com/en/5.2/topics/db/models/)
+
+## Bonus, not covered during the training but generally useful
+
+Many times you will find yourself in situations where your app does not only have to take user input and persist it but communicate with other apps and services as well.
+Just as the frontend of our app sent HTTP requests to the backend, so can the backend send such requests to other services. This is not strictly Django related, but useful to know.
+```python
+import requests
+
+url = "https://random-sample-webpage.com/some-totally-bs-path"
+
+response = requests.get(url)
+
+print(f"Status Code: {response.status_code}")
+print(f"Json response: {response.json()}")
+```
+This code will send a get requests to that URL and return a response, the content of which we can then access and do whatever you want. Cloudflare has a pretty good article on
+the basics of [HTTP](https://www.cloudflare.com/learning/ddos/glossary/hypertext-transfer-protocol-http/). So now we know not only to communicate between the user and
+the server, but the server and other servers as well. 
 
 ## That's all, folks!
 We learned how to create views, how to route them with proper URL patterns, we covered
