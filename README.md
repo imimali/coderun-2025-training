@@ -286,7 +286,7 @@ on the form object such as `form.as_table`, etc.
 
 This renders the form, now we can validate it, interact with it. But it still crashes on submitting it.
 
-See the final version of [user.html](templates/user.html) and notice the 
+See the final version of [user.html](templates/coderun_demo/index.html) and notice the 
 ```html
 {% csrf_token %}
 ```
@@ -305,7 +305,7 @@ class User(models.Model):
     user_name = models.CharField(max_length=20)
     email = models.EmailField()
     weight = models.IntegerField()
-    gender = models.CharField(choices=[('male','male'),('male','female')],max_length=10,default='female')
+    gender = models.CharField(choices=[('male','male'),('female','female')],max_length=10,default='female')
 ```
 And since we added the demo app to the installed apps of the project, (which looks like this now):
 ```python
