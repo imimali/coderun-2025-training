@@ -292,7 +292,10 @@ See the final version of [user.html](templates/user.html) and notice the
 ```
 template tag. This is used to prevent cross-site request forgery. You can read more about it [here](https://docs.djangoproject.com/en/3.2/ref/csrf/).
 
-As you can see, the final version of the models.py contains the following class:
+## Databases, models
+
+You can see a sample model class you can insert in models.py. Again, it's different from what we did during
+the training because I'm adapting an older version of this tutorial. See the following class:
 ```python
 from django.db import models
 
@@ -359,14 +362,14 @@ We'll also display our data now in the form, reiterating over it again, it'll lo
 ```
 As you can see, the list of users displayed is now persisted.
 
-This, however is not all. Models can have references to each other. You can read about how this works [here](https://docs.djangoproject.com/en/5.1/topics/db/models/)
+This, however is not all. Models can have references to each other. You can read about how this works [here](https://docs.djangoproject.com/en/5.2/topics/db/models/)
 
-## That's all for this training!
+## That's all, folks!
 We learned how to create views, how to route them with proper URL patterns, we covered
 sending data through forms and persisting data in a DB.
 You can always refer to the original [documentation](https://www.djangoproject.com/).
 
-And finally, you can reach out to me in multiple ways.
+And finally, if you have any questions, you can reach out to me in multiple ways.
 
 <p align="center">
 <a href="https://www.linkedin.com/in/imre-gergely-mali/" target="blank"><img align="center" src="https://user-images.githubusercontent.com/88904952/234979284-68c11d7f-1acc-4f0c-ac78-044e1037d7b0.png" alt="linkedin" height="50" width="50" /></a>
