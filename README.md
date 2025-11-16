@@ -1,4 +1,4 @@
-# Django - the fastest hand in the west
+# Django - it's fast, very fast, and scalable too
 ![](images/file-gsZddsgkZo8dl59okVHYLSoD.jpg)
 Welcome to the Coderun 2025 Django tutorial. This tutorial will introduce you to the world of web development
 in the context of Django.
